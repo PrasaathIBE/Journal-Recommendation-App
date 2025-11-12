@@ -186,7 +186,7 @@ embed_model = load_local_model()
 # ============================================================
 # ✅ Streamlit UI
 # ============================================================
-st.title("📘 Journal Recommendation (Ultra-Fast · Single Groq Call)")
+st.title("📘 Journal Recommendation App")
 uploaded_file = st.sidebar.file_uploader("Upload Journal Sheet (.xlsx)")
 paper_title = st.sidebar.text_area("Enter Research Paper Title")
 

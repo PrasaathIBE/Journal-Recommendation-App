@@ -164,9 +164,11 @@ from dotenv import load_dotenv
 # ============================================================
 # ✅ Load Environment
 # ============================================================
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-client = Groq(api_key=GROQ_API_KEY)
+# ✅ Read API key from Streamlit Secrets
+groq_api_key = st.secrets["GROQ_API_KEY"]
+
+# ✅ Initialize client
+client = Groq(api_key=groq_api_key)
 
 # ============================================================
 # ✅ Local Embedding Model

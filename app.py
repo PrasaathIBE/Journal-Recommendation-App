@@ -166,14 +166,12 @@ from dotenv import load_dotenv
 # ============================================================
 @st.cache_resource
 def get_groq_client():
-    """Create a cached Groq client once per session."""
     api_key = st.secrets.get("GROQ_API_KEY", None)
     if not api_key:
         st.error("❌ GROQ_API_KEY not found in Streamlit Secrets!")
         st.stop()
     return Groq(api_key=api_key)
 
-# ✅ Call it only inside Streamlit execution context
 client = get_groq_client()
 
 # ============================================================
